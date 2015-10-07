@@ -1,0 +1,19 @@
+{ 
+  "name": "Full Blast", 
+  "version": "1.0", 
+  "description": "Destroys fullscreen elements", 
+  "manifest_version": 2,
+  "options_page" : "html/options.html",
+  "content_scripts" : [
+    {
+      "matches" : ["<all_urls>"],
+      "js" : ["/js/action-helper-content-script.js"],
+      "run_at" : "document_start"
+    }
+  ],
+  "permissions": [ 
+    "<all_urls>",
+	  "tabs",
+	  "storage"
+  ] 
+}
